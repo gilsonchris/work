@@ -10,7 +10,7 @@ order by branch_name asc
 
 --- Calendar (all)
 select * from gold.dim_calendar
-where [date] >= '2025-9-01'
+where [date] >= '2025-8-01'
 
 
 
