@@ -83,8 +83,7 @@
         ],
         "border": [
           {
-            "show": false,
-            "radius": 4
+            "show": false
           }
         ],
         "title": [
@@ -1050,7 +1049,7 @@
             },
             "transparency": 0,
             "weight": 13,
-            "roundEdge": 4
+            "roundEdge": 0
           }
         ],
         "fill": [
@@ -1228,7 +1227,7 @@
         "border": [
           {
             "show": false,
-            "radius": 4
+            "radius": 0
           }
         ],
         "title": [
@@ -1477,34 +1476,6 @@
             },
             "fontFamily": "Calibri",
             "fontSize": 12
-          }
-        ]
-      }
-    },
-    "matrix": {
-      "*": {
-        "columnHeaders": [
-          {
-            "backColor": { "solid": { "color": "#0C2340" } },
-            "fontColor": { "solid": { "color": "#FFFFFF" } },
-            "fontFamily": "Calibri",
-            "fontSize": 12,
-            "alignment": "Left",
-            "wordWrap": true
-          }
-        ]
-      }
-    },
-    "table": {
-      "*": {
-        "columnHeaders": [
-          {
-            "backColor": { "solid": { "color": "#0C2340" } },
-            "fontColor": { "solid": { "color": "#FFFFFF" } },
-            "fontFamily": "Calibri",
-            "fontSize": 12,
-            "alignment": "Left",
-            "wordWrap": true
           }
         ]
       }
