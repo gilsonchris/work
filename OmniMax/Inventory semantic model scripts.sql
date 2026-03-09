@@ -113,5 +113,3 @@ WHERE subinventory_code = 'TCH' ;
 SELECT sum(transaction_pounds) as total_trx_lbs
 FROM gold.fact_consignment 
 WHERE subinventory_code = 'TCH'
-
-
