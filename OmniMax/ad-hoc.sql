@@ -27,10 +27,6 @@ order by date asc
 
 ----------------------------------------------------
 
-select fosd.* from gold.fact_order_ship_detail fosd
-left join gold.dim_calendar dc on dc.date = fosd.line_promise_date
-where dc.fiscal_period = '2026-03'
-and otif_flag = 1
-
-select distinct otif_stp_test, otif_fill_test, otif_flag
-from gold.fact_order_ship_detail fosd
+select order_line_cmb, actual_ship_date, line_promise_date, ship_quantity, first_ship_quantity, otif_stp_test, otif_fill_test, otif_flag, otif_ship_lines from gold.fact_order_ship_detail
+where order_line_cmb in  ('6288895.02','6274618.02', '6255383.01')
+order by order_line_cmb ASC
