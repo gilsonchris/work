@@ -30,3 +30,9 @@ order by date asc
 select order_line_cmb, actual_ship_date, line_promise_date, ship_quantity, first_ship_quantity, otif_stp_test, otif_fill_test, otif_flag, otif_ship_lines from gold.fact_order_ship_detail
 where order_line_cmb in  ('6288895.02','6274618.02', '6255383.01')
 order by order_line_cmb ASC
+
+SELECT * from gold.fact_order_ship_detail
+WHERE actual_ship_date = '2026-03-09'
+
+select distinct branch_name_short, branch_group from gold.dim_branches
+order by branch_name_short asc
