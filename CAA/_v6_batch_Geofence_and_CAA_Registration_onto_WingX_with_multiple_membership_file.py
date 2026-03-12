@@ -102,7 +102,7 @@ user = 'Chris Gilson'
 # =============================================================================
 # Set to True to process ALL files in the Raw folder
 # Set to False to process just one specific file (set input_file_name below)
-BATCH_MODE = False
+BATCH_MODE = True
 
 # WingX INPUT FILE PATH (folder containing WingX CSV files)
 input_file_path = f'C:/Users/{user}/OneDrive/Documents/Dupuis Analytics/CAA/WingX_Data/Raw/'
