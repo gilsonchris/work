@@ -27,12 +27,26 @@ order by date asc
 
 ----------------------------------------------------
 
-select order_line_cmb, actual_ship_date, line_promise_date, ship_quantity, first_ship_quantity, otif_stp_test, otif_fill_test, otif_flag, otif_ship_lines from gold.fact_order_ship_detail
-where order_line_cmb in  ('6288895.02','6274618.02', '6255383.01')
+select * from gold.fact_order_ship_detail 
+where order_line_cmb in  ('6207023.27', '6232042.06')
 order by order_line_cmb ASC
 
-SELECT * from gold.fact_order_ship_detail
-WHERE actual_ship_date = '2026-03-09'
+----------------------------------------------------
 
-select distinct branch_name_short, branch_group from gold.dim_branches
-order by branch_name_short asc
+SELECT 
+    otif_stp_test,
+    CASE 
+        WHEN otif_stp_test = 0 THEN COUNT(*) 
+        ELSE 0 
+    END AS error_count 
+FROM gold.fact_order_ship_detail
+WHERE cpu = 'CPU' 
+GROUP BY otif_stp_test
+ORDER BY otif_stp_test
+
+
+select distinct plant, plant_group, distro_group,  market from gold.fact_order_ship_detail
+order by plant asc
+
+------------------
+
